@@ -1,4 +1,4 @@
-export default function errorHandler(err, res) {
+export default function errorHandler(err, req, res, next) {
   let statusCode = 500;
   let message = "Internal Server Error";
 
