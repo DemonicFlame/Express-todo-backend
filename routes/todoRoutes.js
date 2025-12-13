@@ -1,20 +1,24 @@
 import express from "express";
+import {
+  createTask,
+  getAllTasks,
+  getTaskById,
+  updateTask,
+  deleteTask,
+} from "../controllers/todoController";
 
 const router = express.Router();
 
-// POST /api/todo
-router.post("/todo", (req, res) => {});
+router.post("/todo", createTask);
 
-// GET /api/todo
-router.get("/todo", (req, res) => {});
+router.get("/todo", getAllTasks);
 
-// GET /api/todo/:id
-router.get("/todo/:id", (req, res) => {});
+router.get("/todo/:id", getTaskById);
 
-// PUT /api/todo/:id
-router.put("/todo/:id", (req, res) => {});
+router.put("/todo/:id", updateTask);
 
-// DELETE /api/todo/:id
-router.delete("/todo/:id", (req, res) => {});
+router.delete("/todo/:id", deleteTask);
 
 export default router;
+
+// Endpoint testing pending
