@@ -11,8 +11,8 @@ export function readDataFile() {
   if (!fs.existsSync(dataFilePath)) {
     fs.writeFileSync(dataFilePath, JSON.stringify([]));
   }
-  const data = fs.readFileSync(dataFilePath);
-  return JSON.parse(data);
+  const data = fs.readFileSync(dataFilePath, "utf-8").trim();
+  return data ? JSON.parse(data) : [];
 }
 
 export function writeDataFile(data) {

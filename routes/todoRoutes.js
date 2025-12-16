@@ -5,7 +5,7 @@ import {
   getTaskById,
   updateTask,
   deleteTask,
-} from "../controllers/todoController";
+} from "../controllers/todoController.js";
 
 const router = express.Router();
 
