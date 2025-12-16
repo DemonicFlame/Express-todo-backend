@@ -20,5 +20,3 @@ router.put("/todo/:id", updateTask);
 router.delete("/todo/:id", deleteTask);
 
 export default router;
-
-// Endpoint testing pending
